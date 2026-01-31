@@ -9,17 +9,6 @@ Jogo do NIM implementado em Python 3, onde o computador utiliza uma estratégia 
 python3 main.py
 ```
 
-## Estrutura do Projeto
-
-```
-NIM-game-exercise-in-python/
-├── main.py          # Arquivo principal
-├── game.py          # Lógica do jogo
-├── player.py        # Jogadas do usuário
-├── computer.py      # Estratégia do computador
-└── README.md
-```
-
 ## Regras do Jogo
 
 - N peças são dispostas no tabuleiro

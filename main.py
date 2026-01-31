@@ -1,4 +1,6 @@
-from game import partida, campeonato
+from game import Game
+from scoreboard import Scoreboard
+from round import Round
 
 def main():
     print("Bem-vindo ao jogo do NIM! Escolha:\n")
@@ -7,9 +9,17 @@ def main():
 
     if modo == '1':
         print("\nVoce escolheu uma partida!\n")
-        partida()
+        game = Game()
+        round = Round(game.jogador, game.n, game.m, scoreboard=Scoreboard())
+        round.play()
     elif modo == '2':
-        campeonato()
+        print("\nVoce escolheu um campeonato!\n")
+        sb = Scoreboard()
+        for rodada in range(1, 4):
+            print(f"**** Rodada {rodada} ****\n")
+            game = Game()
+            round = Round(game.jogador, game.n, game.m, scoreboard=sb)
+            round.play()
     else:
         print("Opção inválida. Por favor, escolha 1 ou 2.")
 
